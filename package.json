@@ -1,0 +1,23 @@
+{
+  "name": "salty-bot",
+  "version": "0.0.1",
+  "description": "Spread the salt",
+  "author": "Michael Krukar <mail@michaelkrukar.com> (http://michaelkrukar.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krukar/salty-bot.git"
+  },
+  "engines": {
+    "node": ">=11.4.0"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/Krukar/salty-bot#readme",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "dotenv": "^6.2.0",
+    "nodemon": "^1.18.9"
+  }
+}
