@@ -13,11 +13,19 @@
   "license": "ISC",
   "homepage": "https://github.com/Krukar/salty-bot#readme",
   "scripts": {
-    "start": "nodemon app.js"
+    "lint": "eslint --config .eslintrc src/",
+    "prestart": "npm run lint",
+    "start": "nodemon src/app.js"
   },
   "dependencies": {
     "discord.js": "^11.4.2",
     "dotenv": "^6.2.0",
     "nodemon": "^1.18.9"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0"
   }
 }

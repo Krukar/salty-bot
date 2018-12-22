@@ -1,0 +1,9 @@
+{
+ "events": {
+   "restart": "npm run lint"
+ },
+ "ignore": [
+    ".git",
+    "node_modules/"
+  ]
+}
