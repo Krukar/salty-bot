@@ -1,51 +1,19 @@
+const utilities = require('./../utilities/index.js');
+
 module.exports = (client, message) => {
   if (message.channel.type !== 'dm' || message.author.bot) return;
 
   // Help
-  if (message.content.trim().toLowerCase() === 'help') {
-    message.channel.send('help commands TBA');
+  if (message.content.toLowerCase() === 'help') {
+    message.channel.send('It appears you are salty. Would you like to spread some salt? ```Anything you message me I will send annonymously to the salt mines.\nIf you would like to target a specific channel then try /salt CHANNELID Your salty message.\nYou can find the CHANNELID by right clicking on a channel and selecting Copy ID.```');
+    return;
   }
 
   // /salt
   if (message.content.startsWith('/salt')) {
-    const ids = message.content.match(/(\d+)/g);
-
-    if (!ids) {
-      message.channel.send('Cannot send message, incorrect format. Type help for a list of commands');
-      return;
-    }
-
-    const server = client.guilds.get(ids[0]);
-
-    if (!server) {
-      message.channel.send('Cannot send message. Server ID was incorrect');
-      return;
-    }
-
-    const channel = server.channels.get(ids[1]);
-
-    if (!channel) {
-      message.channel.send('Cannot send message. Channel ID was incorrect');
-      return;
-    }
-
-    const response = message.content.replace(/^\/salt \d+ \d+/, '').trim();
-
-    if (!response) {
-      message.channel.send('Cannot send message. Please include a message');
-      return;
-    }
-
-    channel.send(response);
+    utilities.channel(client, message);
     return;
   }
 
-  // Global Salt
-  client.guilds.forEach((guild) => {
-    const mines = guild.channels.find(channel => channel.name === 'the-salt-mines');
-
-    if (mines) {
-      mines.send(message.content);
-    }
-  });
+  utilities.guilds(client, message);
 };
