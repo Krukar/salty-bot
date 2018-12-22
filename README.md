@@ -9,6 +9,9 @@ https://discordapp.com/oauth2/authorize?client_id=526059821229670401&scope=bot&p
 
 ## Release Notes
 
+### v0.0.3
+* Updated the help command to be more specific for obtaining channel id
+
 ### v0.0.2
 * Clap and Jojo modifiers added
 * Added /salt command

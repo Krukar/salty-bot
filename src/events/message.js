@@ -5,7 +5,7 @@ module.exports = (client, message) => {
 
   // Help
   if (message.content.toLowerCase() === 'help') {
-    message.channel.send('It appears you are salty. Would you like to spread some salt? ```Anything you message me I will send annonymously to the salt mines.\nIf you would like to target a specific channel then try /salt CHANNELID Your salty message.\nYou can find the CHANNELID by right clicking on a channel and selecting Copy ID.```');
+    message.channel.send('It appears you are salty. Would you like to spread some salt? ```Anything you message me I will send annonymously to the salt mines.\nIf you would like to target a specific channel then try /salt CHANNELID Your salty message.\nYou can find the CHANNELID by joining a channel and looking at the url. It will be the last set of numbers.```');
     return;
   }
 
