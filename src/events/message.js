@@ -1,11 +1,18 @@
 const utilities = require('./../utilities/index.js');
 
 module.exports = (client, message) => {
+  // If someone mentions the bot in any channel respond with help
+  if (message.content.includes(`<@${client.user.id}>`)) {
+    message.channel.send(utilities.help());
+    return;
+  }
+
+  // Only respond to messages in DM and not from other bots
   if (message.channel.type !== 'dm' || message.author.bot) return;
 
   // Help
   if (message.content.toLowerCase() === 'help') {
-    message.channel.send('It appears you are salty. Would you like to spread some salt? ```Anything you message me I will send annonymously to the salt mines.\nIf you would like to target a specific channel then try /salt CHANNELID Your salty message.\nYou can find the CHANNELID by joining a channel and looking at the url. It will be the last set of numbers.```');
+    message.channel.send(utilities.help());
     return;
   }
 
