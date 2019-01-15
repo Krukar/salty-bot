@@ -1,3 +1,4 @@
+const clean = require('./clean.js');
 const modify = require('./modify.js');
 
 module.exports = (client, message) => {
@@ -23,8 +24,13 @@ module.exports = (client, message) => {
   // If it did find a server then get the correct channel
   const channel = server.channels.get(split[1]);
 
-  // Remove /salt ID from the message
-  const response = modify(message.content.replace(/\/salt \d+/, ''));
+  let response = clean(message.content);
+
+  if (split[0] === '/clap') {
+    response = modify.clap(response);
+  } else if (split[0] === '/jojo') {
+    response = modify.jojo(response);
+  }
 
   if (!response) {
     message.channel.send('Invalid message. Images and blank messages cannot be sent.');
