@@ -11,10 +11,11 @@ https://discordapp.com/oauth2/authorize?client_id=525503406463516692&scope=bot&p
 
 # To Do
 * Investigate if bot can send a new message each time
-* Add /clap and /jojo commands
-* Ba dum tsh
 
 ## Release Notes
+
+### v0.0.6
+* This is why you write tests. When I pushed the update, I broke guild send
 
 ### v0.0.5
 * Changed how modifiers work. You need to /clap or /jojo to trigger them

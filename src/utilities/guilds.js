@@ -1,4 +1,4 @@
-const modify = require('./modify.js');
+const clean = require('./clean.js');
 
 module.exports = (client, message) => {
   // Global Salt
@@ -6,7 +6,7 @@ module.exports = (client, message) => {
     const mines = guild.channels.find(channel => channel.name === 'the-salt-mines');
 
     if (mines) {
-      const response = modify(message.content);
+      const response = clean(message.content);
       mines.send(response);
     }
   });
