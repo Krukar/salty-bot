@@ -14,6 +14,9 @@ https://discordapp.com/oauth2/authorize?client_id=525503406463516692&scope=bot&p
 
 ## Release Notes
 
+### v0.0.7
+* Final update
+
 ### v0.0.6
 * This is why you write tests. When I pushed the update, I broke guild send
 

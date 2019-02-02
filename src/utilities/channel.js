@@ -37,5 +37,11 @@ module.exports = (client, message) => {
     return;
   }
 
+  // Call out the bullshit
+  if (response.toUpperCase().includes('BA DUM TSH')) {
+    channel.send(`@here ${message.author.username} just tried to fake a BA DUM TSH!`);
+    return;
+  }
+
   channel.send(response);
 };
