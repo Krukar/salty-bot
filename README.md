@@ -14,6 +14,9 @@ https://discordapp.com/oauth2/authorize?client_id=525503406463516692&scope=bot&p
 
 ## Release Notes
 
+### v0.0.8
+* Moved the chance of ba dum tsh to .env file
+
 ### v0.0.7
 * Final update
 

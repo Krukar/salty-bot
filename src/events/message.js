@@ -2,7 +2,8 @@ const utilities = require('./../utilities/index.js');
 
 module.exports = (client, message) => {
   // Randomly say ba dum tsh
-  if ((Math.floor(Math.random() * 1000) + 1) === 1000) {
+  const rate = parseInt(process.env.rate, 10);
+  if ((Math.floor(Math.random() * rate) + 1) === rate) {
     message.channel.send('BA DUM TSH!');
     return;
   }
